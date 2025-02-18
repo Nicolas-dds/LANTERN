@@ -1,0 +1,23 @@
+{
+  "name": "lantern",
+  "version": "1.0.0",
+  "description": "A library for [brief description of the library's purpose].",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "library",
+    "lantern",
+    "[additional keywords]"
+  ],
+  "author": "[Your Name]",
+  "license": "MIT",
+  "dependencies": {
+    "[dependency-name]": "[version]"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.0"
+  }
+}
