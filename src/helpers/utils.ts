@@ -10,9 +10,9 @@ export function mergeObjects<T>(target: T, source: Partial<T>): T {
     return { ...target, ...source };
 }
 
-export function debounce(func: Function, delay: number): Function {
-    let timeoutId: NodeJS.Timeout;
-    return function (...args: any[]) {
+export function debounce<T extends (...args: any[]) => any>(func: T, delay: number): (...args: Parameters<T>) => void {
+    let timeoutId: ReturnType<typeof setTimeout>;
+    return function (this: ThisParameterType<T>, ...args: Parameters<T>) {
         if (timeoutId) {
             clearTimeout(timeoutId);
         }
